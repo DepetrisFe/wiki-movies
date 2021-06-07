@@ -4,6 +4,8 @@ import "./Portada.css";
 const Portada = () => {
   const [movies, setMovies] = useState([]);
 
+  const [idMovie, setIdMovie] = useState(null);
+
   const fetchData = async () => {
     try {
       const result = await fetch(
@@ -20,11 +22,17 @@ const Portada = () => {
     fetchData();
   }, []);
 
+  console.log(idMovie);
+
   return (
     <>
-      <body>
+      <div className="pageBackground">
         {movies.map((test) => (
-          <div key={test.id} className="containerMovie">
+          <div
+            key={test.id}
+            className="containerMovie"
+            onClick={() => setIdMovie(test.id)}
+          >
             <div className="containerImg">
               <img
                 src={`https://image.tmdb.org/t/p/w500${test.poster_path}`}
@@ -37,7 +45,7 @@ const Portada = () => {
             </div>
           </div>
         ))}
-      </body>
+      </div>
     </>
   );
 };
