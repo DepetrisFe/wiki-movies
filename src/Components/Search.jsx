@@ -1,10 +1,13 @@
 import React from "react";
+import "./Search.css";
 
 const Search = () => {
   return (
     <>
       <header>
-        <h2>WIKI-MOVIES</h2>
+        <div className="searchContainer">
+          <p>WIKI-MOVIES</p>
+        </div>
       </header>
     </>
   );
