@@ -4,7 +4,7 @@ import "./Portada.css";
 const Portada = () => {
   const [movies, setMovies] = useState([]);
 
-  const [idMovie, setIdMovie] = useState(null);
+  const [idMovie, setIdMovie] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -31,7 +31,7 @@ const Portada = () => {
           <div
             key={test.id}
             className="containerMovie"
-            onClick={() => setIdMovie(test.id)}
+            onClick={() => setIdMovie(true)}
           >
             <div className="containerImg">
               <img
