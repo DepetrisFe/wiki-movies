@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+//importo el componente modal
+import InfoModal from "./InfoModal";
+import useFixedModal from "./hooks/useFixedModal";
 import "./Portada.css";
 
 const Portada = () => {
   const [movies, setMovies] = useState([]);
-
-  const [idMovie, setIdMovie] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -22,17 +23,18 @@ const Portada = () => {
     fetchData();
   }, []);
 
-  console.log(idMovie);
+  const [
+    FixedInfoModalPortal,
+    isInfoModalVisible,
+    showInfoModal,
+    hideInfoModal,
+  ] = useFixedModal();
 
   return (
     <>
       <div className="pageBackground">
         {movies.map((test) => (
-          <div
-            key={test.id}
-            className="containerMovie"
-            onClick={() => setIdMovie(true)}
-          >
+          <div key={test.id} className="containerMovie" onClick={showInfoModal}>
             <div className="containerImg">
               <img
                 src={`https://image.tmdb.org/t/p/w500${test.poster_path}`}
@@ -46,6 +48,11 @@ const Portada = () => {
           </div>
         ))}
       </div>
+      {isInfoModalVisible && (
+        <FixedInfoModalPortal>
+          <InfoModal titulo={test.title} />
+        </FixedInfoModalPortal>
+      )}
     </>
   );
 };
