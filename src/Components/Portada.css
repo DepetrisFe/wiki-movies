@@ -33,6 +33,7 @@ img {
   height: auto;
   margin: 20px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .containerMovie:hover {
@@ -42,4 +43,56 @@ img {
 .containerImg {
   margin-top: 20px;
   width: 280px;
+}
+
+/* estilos del modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  margin: 1.75rem auto;
+  width: 90%;
+  max-width: 500px;
+  height: 600px;
+  background: #949494;
+  background-clip: padding-box;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.modal-close {
+  margin: -1rem -0.5rem -1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  background: inherit;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  cursor: pointer;
 }

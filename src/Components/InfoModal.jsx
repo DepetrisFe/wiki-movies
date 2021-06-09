@@ -6,7 +6,7 @@ const InfoModal = (props) => {
     props.closeModal();
   };
   return (
-    <div tabIndex={-1} className="container">
+    <div tabIndex={-1} className="container" key={props.id}>
       <div className="modal-header">
         <h5 id="modal-label" className="modal-title">
           {props.titulo}

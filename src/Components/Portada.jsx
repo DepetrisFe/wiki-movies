@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
-//importo el componente modal
-import InfoModal from "./InfoModal";
-import useFixedModal from "../hooks/useFixedModal";
+import usePortal from "react-cool-portal";
 import "./Portada.css";
 
 const Portada = () => {
+  const { Portal, show, hide } = usePortal({
+    defaultShow: false, // The default visibility of portal, default is true
+    onShow: (e) => {
+      mensaje();
+    },
+    onHide: (e) => {
+      console.log("el portal se cierra");
+    },
+  });
+
   const [movies, setMovies] = useState([]);
 
   const fetchData = async () => {
@@ -23,18 +31,15 @@ const Portada = () => {
     fetchData();
   }, []);
 
-  const [
-    FixedInfoModalPortal,
-    isInfoModalVisible,
-    showInfoModal,
-    hideInfoModal,
-  ] = useFixedModal();
+  const mensaje = () => {
+    console.log("el portal se abre");
+  };
 
   return (
-    <>
+    <div>
       <div className="pageBackground">
         {movies.map((test) => (
-          <div key={test.id} className="containerMovie" onClick={showInfoModal}>
+          <div key={test.id} className="containerMovie" onClick={show}>
             <div className="containerImg">
               <img
                 src={`https://image.tmdb.org/t/p/w500${test.poster_path}`}
@@ -47,19 +52,35 @@ const Portada = () => {
             </div>
           </div>
         ))}
-
-        {isInfoModalVisible && (
-          <FixedInfoModalPortal>
-            <InfoModal
-              titulo={"Titulo cualquiera"}
-              closeModal={() => {
-                hideInfoModal();
-              }}
-            />
-          </FixedInfoModalPortal>
-        )}
       </div>
-    </>
+      <Portal>
+        <div className="modal" tabIndex={-1}>
+          <div
+            className="modal-dialog"
+            role="dialog"
+            aria-labelledby="modal-label"
+            aria-modal="true"
+          >
+            <div className="modal-header">
+              <h5 id="modal-label" className="modal-title">
+                Modal title
+              </h5>
+              <button
+                className="modal-close"
+                onClick={hide}
+                type="button"
+                aria-label="Close"
+              >
+                X
+              </button>
+            </div>
+            <div className="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+          </div>
+        </div>
+      </Portal>
+    </div>
   );
 };
 
