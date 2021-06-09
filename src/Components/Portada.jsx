@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //importo el componente modal
 import InfoModal from "./InfoModal";
-import useFixedModal from "./hooks/useFixedModal";
+import useFixedModal from "../hooks/useFixedModal";
 import "./Portada.css";
 
 const Portada = () => {
@@ -47,12 +47,18 @@ const Portada = () => {
             </div>
           </div>
         ))}
+
+        {isInfoModalVisible && (
+          <FixedInfoModalPortal>
+            <InfoModal
+              titulo={"Titulo cualquiera"}
+              closeModal={() => {
+                hideInfoModal();
+              }}
+            />
+          </FixedInfoModalPortal>
+        )}
       </div>
-      {isInfoModalVisible && (
-        <FixedInfoModalPortal>
-          <InfoModal titulo={test.title} />
-        </FixedInfoModalPortal>
-      )}
     </>
   );
 };

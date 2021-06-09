@@ -1,14 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import usePortal from "react-cool-portal";
 
-export default (): [
-  React.FC<{
-    children: React.ReactNode;
-  }>,
-  boolean,
-  () => void,
-  () => void
-] => {
+const useFixedModal = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const { Portal, show, hide } = usePortal({
     defaultShow: false,
@@ -24,3 +17,5 @@ export default (): [
   });
   return [Portal, isModalVisible, show, hide];
 };
+
+export default useFixedModal;
