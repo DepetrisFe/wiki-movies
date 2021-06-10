@@ -3,12 +3,11 @@
   padding: 0px;
 }
 
-.pageBackground {
+.pageMain {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 20px;
-  background-color: #2b2b2b;
 }
 
 img {

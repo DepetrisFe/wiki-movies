@@ -1,0 +1,54 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.switchBar {
+  display: flex;
+  margin-top: 30px;
+  width: 70%;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.77);
+}
+
+.leftSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid rgb(0, 223, 223);
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.leftSwitch :hover {
+  background-color: rgba(0, 223, 223, 0.849);
+}
+
+.middleSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgb(0, 223, 223);
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.rightSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgb(0, 223, 223);
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}

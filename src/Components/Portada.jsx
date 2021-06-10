@@ -37,7 +37,7 @@ const Portada = () => {
 
   return (
     <div>
-      <div className="pageBackground">
+      <div className="pageMain">
         {movies.map((test) => (
           <div key={test.id} className="containerMovie" onClick={show}>
             <div className="containerImg">
