@@ -1,12 +1,18 @@
 import React from "react";
-import "./Switch.css";
-//import Portada from "./Portada";
+import "./SwitchBar.css";
+import Portada from "./Portada";
 
-const Switch = () => {
+const SwitchBar = () => {
+  const urls = () => {
+    const hrm =
+      "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=049d63d518130338d64b9940efba8c4f&page=1";
+    <Portada url={hrm} />;
+  };
+
   return (
     <div className="mainContainer">
       <div className="switchBar">
-        <button className="leftSwitch" onClick={() => console.log("boton 1")}>
+        <button className="leftSwitch" onClick={urls()}>
           Highest rated movies
         </button>
         <button className="middleSwitch" onClick={() => console.log("boton 2")}>
@@ -20,4 +26,4 @@ const Switch = () => {
   );
 };
 
-export default Switch;
+export default SwitchBar;

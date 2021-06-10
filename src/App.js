@@ -1,13 +1,13 @@
 import React from "react";
 import Portada from "./Components/Portada";
 import Search from "./Components/Search";
-import Switch from "./Components/Switch";
+import SwitchBar from "./Components/SwitchBar";
 
 function App() {
   return (
     <>
       <Search />
-      <Switch />
+      <SwitchBar />
       <Portada />
     </>
   );

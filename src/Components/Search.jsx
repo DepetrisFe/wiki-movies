@@ -6,7 +6,7 @@ const Search = () => {
     <>
       <header>
         <div className="searchContainer">
-          <p>WIKI-MOVIES</p>
+          <p></p>
         </div>
       </header>
     </>

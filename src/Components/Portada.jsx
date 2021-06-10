@@ -6,7 +6,7 @@ const Portada = () => {
   const { Portal, show, hide } = usePortal({
     defaultShow: false, // The default visibility of portal, default is true
     onShow: (e) => {
-      mensaje();
+      console.log("el portal se abre");
     },
     onHide: (e) => {
       console.log("el portal se cierra");
@@ -30,10 +30,6 @@ const Portada = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
-  const mensaje = () => {
-    console.log("el portal se abre");
-  };
 
   return (
     <div>
