@@ -1,24 +1,38 @@
 import React from "react";
 import "./SwitchBar.css";
-import Portada from "./Portada";
 
-const SwitchBar = () => {
-  const urls = () => {
-    const hrm =
-      "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=049d63d518130338d64b9940efba8c4f&page=1";
-    <Portada url={hrm} />;
+const SwitchBar = (props) => {
+  const onClickHandler = (url) => {
+    props.test(url);
   };
 
   return (
     <div className="mainContainer">
       <div className="switchBar">
-        <button className="leftSwitch" onClick={urls()}>
+        <button
+          className="leftSwitch"
+          onClick={() =>
+            onClickHandler(
+              "movie?primary_release_year=2010&sort_by=vote_average.desc"
+            )
+          }
+        >
           Highest rated movies
         </button>
-        <button className="middleSwitch" onClick={() => console.log("boton 2")}>
+        <button
+          className="middleSwitch"
+          onClick={() => onClickHandler("movie?sort_by=popularity.desc")}
+        >
           Popular Movies
         </button>
-        <button className="rightSwitch" onClick={() => console.log("boton 3")}>
+        <button
+          className="rightSwitch"
+          onClick={() =>
+            onClickHandler(
+              "movie/?certification_country=US&certification=R&sort_by=vote_average.desc"
+            )
+          }
+        >
           Popular movies for kids
         </button>
       </div>
