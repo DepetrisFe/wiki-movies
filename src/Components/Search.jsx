@@ -6,7 +6,12 @@ const Search = () => {
     <>
       <header>
         <div className="searchContainer">
-          <p></p>
+          <div className="leftSection">
+            <p>Wiki Movies</p>
+          </div>
+          <div className="rightSection">
+            <input type="text" placeholder="Search Movies"></input>
+          </div>
         </div>
       </header>
     </>

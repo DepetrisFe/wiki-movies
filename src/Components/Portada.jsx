@@ -3,7 +3,8 @@ import usePortal from "react-cool-portal";
 import "./Portada.css";
 
 const Portada = (props) => {
-  console.log("props", props);
+  //console.log que muestra en consola la porcion de url que se recibe
+  //console.log("props", props);
   const { Portal, show, hide } = usePortal({
     defaultShow: false, // The default visibility of portal, default is true
     onShow: (e) => {

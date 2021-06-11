@@ -13,11 +13,11 @@ const SwitchBar = (props) => {
           className="leftSwitch"
           onClick={() =>
             onClickHandler(
-              "movie?primary_release_year=2010&sort_by=vote_average.desc"
+              "movie?primary_release_date.gte=2020-09-15&primary_release_date.lte=2020-10-22"
             )
           }
         >
-          Highest rated movies
+          Actually in Theatres
         </button>
         <button
           className="middleSwitch"
@@ -28,12 +28,10 @@ const SwitchBar = (props) => {
         <button
           className="rightSwitch"
           onClick={() =>
-            onClickHandler(
-              "movie/?certification_country=US&certification=R&sort_by=vote_average.desc"
-            )
+            onClickHandler("movie?with_genres=18&primary_release_year=2014")
           }
         >
-          Popular movies for kids
+          Best Dramas
         </button>
       </div>
     </div>
