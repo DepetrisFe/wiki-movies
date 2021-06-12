@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import usePortal from "react-cool-portal";
-import "./Portada.css";
+
+import "./portada.css";
 
 const Portada = (props) => {
-  //console.log que muestra en consola la porcion de url que se recibe
-  //console.log("props", props);
   const { Portal, show, hide } = usePortal({
     defaultShow: false, // The default visibility of portal, default is true
     onShow: (e) => {
@@ -15,44 +14,21 @@ const Portada = (props) => {
     },
   });
 
-  const [movies, setMovies] = useState([]);
-
-  const baseUrl = "http://api.themoviedb.org/3/discover/";
-  const API_KEY = "&api_key=049d63d518130338d64b9940efba8c4f";
-
-  const fetchData = async (pito) => {
-    try {
-      const result = await fetch(`${baseUrl + pito + API_KEY}&page=1`);
-      const finalResult = await result.json();
-      setMovies(finalResult.results);
-    } catch (e) {
-      console.log("error", e);
-    }
-  };
-  //movie?sort_by=popularity.desc
-
-  useEffect(() => {
-    fetchData(props.middleUrl);
-  }, [props.middleUrl]);
-
   return (
     <div>
-      <div className="pageMain">
-        {movies.map((test) => (
-          <div key={test.id} className="containerMovie" onClick={show}>
-            <div className="containerImg">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${test.poster_path}`}
-                alt={test.title}
-              />
-            </div>
-            <div className="containerTitle">
-              <h2>{test.title}</h2>
-              {/* <h3>Lenguaje: {test.original_language}</h3> */}
-            </div>
-          </div>
-        ))}
+      <div className="containerMovie" onClick={show}>
+        <div className="containerImg">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${props.datos.poster_path}`}
+            alt={props.datos.title}
+          />
+        </div>
+        <div className="containerTitle">
+          <h2>{props.datos.title}</h2>
+          {/* <h3>Lenguaje: {test.original_language}</h3> */}
+        </div>
       </div>
+
       <Portal>
         <div className="modal" tabIndex={-1}>
           <div
@@ -63,7 +39,7 @@ const Portada = (props) => {
           >
             <div className="modal-header">
               <h5 id="modal-label" className="modal-title">
-                Modal title
+                {props.datos.original_title}
               </h5>
               <button
                 className="modal-close"
@@ -75,7 +51,7 @@ const Portada = (props) => {
               </button>
             </div>
             <div className="modal-body">
-              <p>Modal body text goes here.</p>
+              <p>{props.datos.overview}</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Portada from "./Components/Portada";
+import Cartelera from "./Components/Cartelera";
 import Search from "./Components/Search";
 import SwitchBar from "./Components/SwitchBar";
 
@@ -15,7 +15,7 @@ function App() {
     <>
       <Search />
       <SwitchBar test={(url1) => fillSectionUrl(url1)} />
-      <Portada middleUrl={sectionUrl} />
+      <Cartelera middleUrl={sectionUrl} />
     </>
   );
 }
