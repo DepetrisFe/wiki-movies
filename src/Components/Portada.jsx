@@ -7,10 +7,10 @@ const Portada = (props) => {
   const { Portal, show, hide } = usePortal({
     defaultShow: false, // The default visibility of portal, default is true
     onShow: (e) => {
-      console.log("el portal se abre");
+      //console.log("el portal se abre");
     },
     onHide: (e) => {
-      console.log("el portal se cierra");
+      //console.log("el portal se cierra");
     },
   });
 
@@ -38,9 +38,18 @@ const Portada = (props) => {
             aria-modal="true"
           >
             <div className="modal-header">
-              <h5 id="modal-label" className="modal-title">
-                {props.datos.original_title}
-              </h5>
+              <div className="movieImg">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${props.datos.poster_path}`}
+                  alt={props.datos.title}
+                />
+              </div>
+              <div className="titleColumn">
+                <h2 id="modal-label" className="modal-title">
+                  {props.datos.original_title}
+                </h2>
+                <p>{props.datos.release_date}</p>
+              </div>
               <button
                 className="modal-close"
                 onClick={hide}

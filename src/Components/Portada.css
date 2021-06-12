@@ -44,19 +44,35 @@ img {
 
 .modal-dialog {
   margin: 1.75rem auto;
-  width: 90%;
-  max-width: 500px;
-  height: 600px;
-  background: #949494;
+  width: 95%;
+  height: 95%;
+  max-width: 700px;
+  min-height: 600px;
+  background: #383838;
+  box-shadow: 1px 1px 25px 12px rgba(0, 0, 0, 0.78);
   background-clip: padding-box;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(14, 201, 201);
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
+}
+
+.movieImg {
+  display: flex;
+  width: 40%;
+  max-height: 50%;
+}
+
+.titleColumn {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 10px;
 }
 
 .modal-body {
@@ -65,7 +81,7 @@ img {
 
 .modal-title {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-weight: bold;
   line-height: 1.5;
 }

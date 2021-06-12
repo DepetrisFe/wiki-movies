@@ -25,10 +25,6 @@
   cursor: pointer;
 }
 
-.leftSwitch :hover {
-  background-color: rgba(0, 223, 223, 0.849);
-}
-
 .middleSwitch {
   display: flex;
   justify-content: center;
