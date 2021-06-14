@@ -43,17 +43,17 @@ img {
 }
 
 .modal-dialog {
+  display: flex;
+  flex-direction: column;
   margin: 1.75rem auto;
   width: 95%;
-  height: 95%;
+  height: 80%;
   max-width: 700px;
   min-height: 600px;
   background: #383838;
   box-shadow: 1px 1px 25px 12px rgba(0, 0, 0, 0.78);
   background-clip: padding-box;
   color: white;
-  border-radius: 10px;
-  border: 1px solid rgb(14, 201, 201);
 }
 
 .modal-header {
@@ -64,8 +64,7 @@ img {
 
 .movieImg {
   display: flex;
-  width: 40%;
-  max-height: 50%;
+  width: 100%;
 }
 
 .titleColumn {

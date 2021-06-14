@@ -40,15 +40,15 @@ const Portada = (props) => {
             <div className="modal-header">
               <div className="movieImg">
                 <img
-                  src={`https://image.tmdb.org/t/p/w500${props.datos.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w500${props.datos.backdrop_path}`}
                   alt={props.datos.title}
                 />
               </div>
               <div className="titleColumn">
                 <h2 id="modal-label" className="modal-title">
-                  {props.datos.original_title}
+                  {/* {props.datos.original_title} */}
                 </h2>
-                <p>{props.datos.release_date}</p>
+                {/* <p>{props.datos.release_date}</p> */}
               </div>
               <button
                 className="modal-close"
@@ -60,7 +60,7 @@ const Portada = (props) => {
               </button>
             </div>
             <div className="modal-body">
-              <p>{props.datos.overview}</p>
+              {/* <p>{props.datos.overview}</p> */}
             </div>
           </div>
         </div>

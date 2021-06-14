@@ -1,7 +1,11 @@
 import React from "react";
 import "./Search.css";
 
-const Search = () => {
+const Search = (props) => {
+  const onFillSearch = (part) => {
+    props.fill(part);
+  };
+
   return (
     <>
       <header>
@@ -10,7 +14,13 @@ const Search = () => {
             <p>Wiki Movies</p>
           </div>
           <div className="rightSection">
-            <input type="text" placeholder="Search Movies"></input>
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={(event) => {
+                onFillSearch(event.target.value);
+              }}
+            ></input>
           </div>
         </div>
       </header>
