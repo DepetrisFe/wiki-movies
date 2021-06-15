@@ -5,8 +5,6 @@ import SwitchBar from "./Components/SwitchBar";
 
 function App() {
   const [sectionUrl, setSectionUrl] = useState("movie?sort_by=popularity.desc");
-
-  // useState del search
   const [searchMovie, setSearchMovie] = useState("");
 
   //funcion que ejecuta el setSectionUrl del useState y que actualiza la URL que se recibe desde SwitchBar
@@ -15,7 +13,6 @@ function App() {
   };
 
   const fillSearch = (part2) => {
-    console.log(part2);
     setSearchMovie(part2);
   };
 
