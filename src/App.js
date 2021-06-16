@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Cartelera from "./Components/Cartelera";
 import Search from "./Components/Search";
 import SwitchBar from "./Components/SwitchBar";
+import Footer from "./Components/Footer";
 
 function App() {
   const [sectionUrl, setSectionUrl] = useState("movie?sort_by=popularity.desc");
@@ -21,6 +22,7 @@ function App() {
       <Search fill={(part1) => fillSearch(part1)} />
       <SwitchBar test={(url1) => fillSectionUrl(url1)} />
       <Cartelera middleUrl={sectionUrl} fillSearch={searchMovie} />
+      <Footer />
     </>
   );
 }

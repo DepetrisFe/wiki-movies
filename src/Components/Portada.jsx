@@ -37,30 +37,39 @@ const Portada = (props) => {
             aria-labelledby="modal-label"
             aria-modal="true"
           >
-            <div className="modal-header">
+            <div className="modal-head">
               <div className="movieImg">
                 <img
-                  src={`https://image.tmdb.org/t/p/w500${props.datos.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/w500${props.datos.poster_path}`}
                   alt={props.datos.title}
                 />
               </div>
               <div className="titleColumn">
                 <h2 id="modal-label" className="modal-title">
-                  {/* {props.datos.original_title} */}
+                  {props.datos.original_title}
                 </h2>
-                {/* <p>{props.datos.release_date}</p> */}
+                <p>
+                  <b>Release date: </b> {props.datos.release_date}
+                  <br />
+                  <b>Vote average: </b> {props.datos.vote_average}
+                </p>
               </div>
-              <button
-                className="modal-close"
-                onClick={hide}
-                type="button"
-                aria-label="Close"
-              >
-                X
-              </button>
+              <div>
+                <button
+                  className="modal-close"
+                  onClick={hide}
+                  type="button"
+                  aria-label="Close"
+                >
+                  X
+                </button>
+              </div>
             </div>
             <div className="modal-body">
-              {/* <p>{props.datos.overview}</p> */}
+              <h3>
+                <u>Overview:</u>
+              </h3>
+              <p>{props.datos.overview}</p>
             </div>
           </div>
         </div>

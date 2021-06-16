@@ -5,9 +5,13 @@ img {
 
 .containerTitle {
   font-size: 12px;
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 10px 5px 22px 5px;
   color: #ffffff;
+}
+
+.containerTitle h2 {
+  margin: 5px;
 }
 
 .containerMovie {
@@ -17,7 +21,7 @@ img {
   background-color: #383838;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.77);
   width: 250px;
-  height: auto;
+  height: 470px;
   margin: 8px;
   border-radius: 10px;
   cursor: pointer;
@@ -47,54 +51,60 @@ img {
   flex-direction: column;
   margin: 1.75rem auto;
   width: 95%;
-  height: 80%;
+  height: auto;
   max-width: 700px;
-  min-height: 600px;
+  min-height: 400px;
   background: #383838;
   box-shadow: 1px 1px 25px 12px rgba(0, 0, 0, 0.78);
   background-clip: padding-box;
   color: white;
 }
 
-.modal-header {
+.modal-head {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
 }
 
 .movieImg {
   display: flex;
-  width: 100%;
+  width: 50%;
+  min-width: 150px;
 }
 
 .titleColumn {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding-left: 10px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .modal-body {
-  padding: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+  margin: 5px;
+}
+
+h3 {
+  margin: 0px;
 }
 
 .modal-title {
   margin: 0;
-  font-size: 2.25rem;
+  width: 100%;
+  font-size: 30px;
   font-weight: bold;
   line-height: 1.5;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
 }
 
 .modal-close {
-  margin: -1rem -0.5rem -1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  font-size: 2rem;
+  font-size: 30px;
+  border-radius: 7px;
   font-weight: 700;
-  line-height: 1;
-  color: #000;
+  color: rgb(255, 255, 255);
   background: inherit;
-  text-shadow: 0 1px 0 #fff;
-  opacity: 0.5;
   cursor: pointer;
 }

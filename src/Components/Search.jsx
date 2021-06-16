@@ -11,12 +11,12 @@ const Search = (props) => {
       <header>
         <div className="searchContainer">
           <div className="leftSection">
-            <img src="/wikiMoviesLogo.png" alt="wiki movies logo"></img>
+            <img src="/WikiMovies.png" alt="wiki movies logo"></img>
           </div>
           <div className="rightSection">
             <input
-              type="text"
-              placeholder="Search"
+              type="search"
+              placeholder="Search movies or series!"
               onChange={(event) => {
                 onFillSearch(event.target.value);
               }}
