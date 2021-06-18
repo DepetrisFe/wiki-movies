@@ -11,7 +11,10 @@ const Search = (props) => {
       <header>
         <div className="searchContainer">
           <div className="leftSection">
-            <img src="/WikiMovies.png" alt="wiki movies logo"></img>
+            <img
+              src="https://i.ibb.co/80h8BWN/Wiki-Movies.png"
+              alt="Logo"
+            ></img>
           </div>
           <div className="rightSection">
             <input

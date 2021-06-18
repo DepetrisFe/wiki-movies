@@ -8,7 +8,7 @@ const Cartelera = (props) => {
 
   const [movies, setMovies] = useState([]);
 
-  const baseUrl = "http://api.themoviedb.org/3/discover/";
+  const baseUrl = "https://api.themoviedb.org/3/discover/";
   const API_KEY = "&api_key=049d63d518130338d64b9940efba8c4f";
 
   const fetchData = async (pieceUrl) => {
