@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wiki-movies/static/css/main.32af948f.chunk.css",
-    "main.js": "/wiki-movies/static/js/main.2c5a31aa.chunk.js",
-    "main.js.map": "/wiki-movies/static/js/main.2c5a31aa.chunk.js.map",
+    "main.js": "/wiki-movies/static/js/main.daced439.chunk.js",
+    "main.js.map": "/wiki-movies/static/js/main.daced439.chunk.js.map",
     "runtime-main.js": "/wiki-movies/static/js/runtime-main.c8f6768f.js",
     "runtime-main.js.map": "/wiki-movies/static/js/runtime-main.c8f6768f.js.map",
     "static/js/2.0d34fc62.chunk.js": "/wiki-movies/static/js/2.0d34fc62.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.c8f6768f.js",
     "static/js/2.0d34fc62.chunk.js",
     "static/css/main.32af948f.chunk.css",
-    "static/js/main.2c5a31aa.chunk.js"
+    "static/js/main.daced439.chunk.js"
   ]
 }
