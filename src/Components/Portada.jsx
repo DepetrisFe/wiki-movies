@@ -1,7 +1,7 @@
 import React from "react";
 import usePortal from "react-cool-portal";
 
-import "./portada.css";
+import "./Portada.css";
 
 const Portada = (props) => {
   const { Portal, show, hide } = usePortal({
